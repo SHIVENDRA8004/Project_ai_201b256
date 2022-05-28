@@ -57,8 +57,8 @@
             android:layout_marginRight="10dp"
             android:onClick="load"
             android:tag="0"
-            android:text="Button"
-            android:textSize="50sp"
+            android:text="Shiva"
+            android:textSize="30sp"
             app:layout_column="0"
             app:layout_row="0" />
 
@@ -68,8 +68,8 @@
             android:layout_height="150dp"
             android:onClick="load"
             android:tag="1"
-            android:text="Button"
-            android:textSize="50sp"
+            android:text="Shiva"
+            android:textSize="30sp"
             app:layout_column="1"
             app:layout_row="0" />
 
@@ -80,8 +80,8 @@
             android:layout_marginRight="10dp"
             android:onClick="load"
             android:tag="2"
-            android:text="Button"
-            android:textSize="50sp"
+            android:text="Shiva"
+            android:textSize="30sp"
             app:layout_column="0"
             app:layout_row="1" />
 
@@ -91,8 +91,8 @@
             android:layout_height="150dp"
             android:onClick="load"
             android:tag="3"
-            android:text="Button"
-            android:textSize="50sp"
+            android:text="Shiva"
+            android:textSize="30sp"
             app:layout_column="1"
             app:layout_row="1" />
     </androidx.gridlayout.widget.GridLayout>
