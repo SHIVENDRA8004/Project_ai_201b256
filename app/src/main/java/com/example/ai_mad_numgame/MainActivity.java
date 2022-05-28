@@ -96,24 +96,24 @@ public class MainActivity extends AppCompatActivity {
         correctButton=random.nextInt(4);
         if (correctButton==0) {
             button1.setText(correctans + "");
-            button2.setText(correctans + 1 + "");
+            button2.setText(correctans + 4 + "");
             button3.setText(correctans * 2 + "");
             button4.setText(correctans - 3 + "");
         }
         else if (correctButton==1) {
-            button1.setText(correctans + 1 +"");
+            button1.setText(correctans + 4 +"");
             button2.setText(correctans + "");
             button3.setText(correctans * 2 + "");
             button4.setText(correctans - 3 + "");
         }
         else if (correctButton==2) {
-            button1.setText(correctans + 1 +"");
+            button1.setText(correctans + 4 +"");
             button2.setText(correctans * 2+ "");
             button3.setText(correctans +"");
             button4.setText(correctans - 3 + "");
         }
         else {
-            button1.setText(correctans + 1 + "");
+            button1.setText(correctans + 4 + "");
             button2.setText(correctans * 2 + "");
             button3.setText(correctans + "");
             button4.setText(correctans - 3 + "");
@@ -136,6 +136,10 @@ public class MainActivity extends AppCompatActivity {
         //Computing the sum of score array, which has the 1 or in each index,depending on correct or incorrect answers
         int sum=0;
        // your code here
+        for(int i=0;i<score.length;i++)
+        {
+            sum+=score[i];
+        }
         return sum;
     }
 
@@ -155,6 +159,25 @@ public class MainActivity extends AppCompatActivity {
     public String getInterpretation(int [][]dataFrame,double slope){
        //provide interpretation based on your slope analysis
         // Your code here
+        String Interpretation= "";
+        if(dataFrame[0][1]==3 && slope==0)
+        {
+            return   "Improvement Required";
+        }
+        else if(dataFrame[0][1]==3 && slope==0.0)
+        {
+            return "Maximum Performance";
+        }
+        else if(slope>0.0 && slope<0.5)
+        {
+            return "You're improving slowly";
+        }
+        else if(slope>0.5){
+            return "Getting Better";
+        }
+        else if (slope < 0.0) {
+            return "Decline in Performance";
+        }
         return "Your Interpretation";
     }
 }
