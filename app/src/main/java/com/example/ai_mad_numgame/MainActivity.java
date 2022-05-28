@@ -78,6 +78,46 @@ public class MainActivity extends AppCompatActivity {
         textView2.setText(operand1 + operator + operand2);
 
       // Your code here, to diplay correct and incorrect options on the buttons
+        int correctans=-100;
+        switch (operator) {
+            case "+":
+                correctans = operand1 + operand2;
+                break;
+            case "-":
+                correctans = operand1 - operand2;
+                break;
+            case "*":
+                correctans = operand1 * operand2;
+                break;
+            case "/":
+                correctans = operand1 / operand2;
+                break;
+        }
+        correctButton=random.nextInt(4);
+        if (correctButton==0) {
+            button1.setText(correctans + "");
+            button2.setText(correctans + 1 + "");
+            button3.setText(correctans * 2 + "");
+            button4.setText(correctans - 3 + "");
+        }
+        else if (correctButton==1) {
+            button1.setText(correctans + 1 +"");
+            button2.setText(correctans + "");
+            button3.setText(correctans * 2 + "");
+            button4.setText(correctans - 3 + "");
+        }
+        else if (correctButton==2) {
+            button1.setText(correctans + 1 +"");
+            button2.setText(correctans * 2+ "");
+            button3.setText(correctans +"");
+            button4.setText(correctans - 3 + "");
+        }
+        else {
+            button1.setText(correctans + 1 + "");
+            button2.setText(correctans * 2 + "");
+            button3.setText(correctans + "");
+            button4.setText(correctans - 3 + "");
+        }
 
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
